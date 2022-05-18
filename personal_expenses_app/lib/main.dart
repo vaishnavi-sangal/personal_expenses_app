@@ -1,6 +1,12 @@
 // ignore_for_file: deprecated_member_use, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:personal_expenses_app/new_transactions.dart';
+import 'package:personal_expenses_app/transaction.dart';
+import 'package:intl/intl.dart';
+import 'package:personal_expenses_app/transactions_list.dart';
+import './transactions_list.dart';
+import './user_transactions.dart';
 
 void main() {
   //var home;
@@ -15,24 +21,10 @@ class MyApp extends StatelessWidget {
       // ShowDebugModeBanner:false,
       home: Scaffold(
         appBar: AppBar(title: Text('Personal Expenses App')),
-        body: Card(
-          child: Column(
-            children: <Widget>[
-              TextFormField(
-                decoration: InputDecoration(labelText: 'name'),
-              ),
-              TextFormField(
-                decoration: InputDecoration(labelText: 'password'),
-              ),
-              ElevatedButton(
-                child: Text('login'),
-                onPressed: () {
-                  Text('login successfully');
-                },
-              ),
-            ],
-            // ElevatedButton(onPressed:null,child: Text('login'),),
-          ),
+        // final titleController=  TextEditingController();
+
+        body: Container(
+          child: UserTransaction(),
         ),
       ),
     );
